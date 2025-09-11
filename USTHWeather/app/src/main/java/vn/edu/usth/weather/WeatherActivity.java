@@ -20,8 +20,10 @@ public class WeatherActivity extends AppCompatActivity {
         setContentView(R.layout.activity_weather);
 
             ForecastFragment forecastFragment = new ForecastFragment();
+            WeatherFragment weatherFragment = new WeatherFragment();
 
             getSupportFragmentManager().beginTransaction().add(R.id.container, forecastFragment).commit();
+            getSupportFragmentManager().beginTransaction().add(R.id.container, weatherFragment).commit();
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
